@@ -46,7 +46,7 @@ public class ItemDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_item_detail, container, false);
 
-        
+
         if (mItem != null) {
             ((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.details);
             Button boton = (Button) rootView.findViewById(R.id.botonBorrar);
