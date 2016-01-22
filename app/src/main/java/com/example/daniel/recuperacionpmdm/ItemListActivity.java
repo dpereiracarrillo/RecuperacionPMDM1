@@ -68,6 +68,7 @@ public class ItemListActivity extends AppCompatActivity
             Intent detailIntent = new Intent(this, ItemDetailActivity.class);
             detailIntent.putExtra(ItemDetailFragment.ARG_ITEM_ID, id);
             startActivity(detailIntent);
+            //mandamos con el forResult el intent y el numero que sera luego lo que recibe el requestCode
             startActivityForResult(detailIntent,1);
 
 
@@ -78,6 +79,7 @@ public class ItemListActivity extends AppCompatActivity
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 1) {
             if (resultCode == Activity.RESULT_OK) {
+                //si recibe un requestCode de 1 del intent y un activity.resultOk tambien del intent muestra una toast que dice Activity Cerrada
                 Toast.makeText(getBaseContext(), "Activity Cerrada", Toast.LENGTH_SHORT).show();
             }
         }
